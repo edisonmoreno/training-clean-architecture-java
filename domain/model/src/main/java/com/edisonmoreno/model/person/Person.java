@@ -1,9 +1,10 @@
 package com.edisonmoreno.model.person;
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
+@Getter
+@Setter
 @Data
-@Builder(toBuilder = true)
+@NoArgsConstructor
 public class Person {
     private String id;
     private Float balance;

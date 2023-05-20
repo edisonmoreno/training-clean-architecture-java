@@ -13,7 +13,9 @@ public class PersonUseCase {
     private final PersonRepository repositoryGateway;
 
     public Mono<Person> getPerson(String id) {
-        return repositoryGateway.findById(id).defaultIfEmpty(Person.builder().name("NOT_FOUND").build());
+        Person p = new Person();
+        p.setName("NOT_FOUND");
+        return repositoryGateway.findById(id).defaultIfEmpty(p);
     }
 
     public Flux<Person> getAll() {

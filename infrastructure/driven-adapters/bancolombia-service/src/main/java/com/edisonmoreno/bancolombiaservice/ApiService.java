@@ -8,10 +8,10 @@ import reactor.core.publisher.Mono;
 public class ApiService implements PersonService {
     @Override
     public Mono<Person> getPerson(String id) {
-        return Mono.just(Person.builder()
-                        .id(id)
-                        .balance(60111222f)
-                .build());
+        Person p = new Person();
+        p.setId(id);
+        p.setBalance(60111222f);
+        return Mono.just( p);
     }
 
     @Override

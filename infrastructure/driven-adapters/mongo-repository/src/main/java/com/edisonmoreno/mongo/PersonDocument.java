@@ -15,4 +15,5 @@ public class PersonDocument {
     private String id;
     private String name;
     private String lastname;
+    private String balance;
 }

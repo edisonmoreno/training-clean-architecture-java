@@ -21,7 +21,9 @@ public class MongoRepositoryAdapter extends AdapterOperations<Person, PersonDocu
 
     @Override
     public Flux<Person> findByAll() {
-        return repository.findAll().map(this::toEntity);
+        return repository
+                .findAll()
+                .map(this::toEntity);
     }
 
     @Override
